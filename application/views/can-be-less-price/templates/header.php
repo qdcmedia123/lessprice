@@ -25,12 +25,28 @@
 <link href="<?php echo base_url(); ?>/assets/css/ui.css" rel="stylesheet" type="text/css"/>
 <link href="<?php echo base_url(); ?>/assets/css/responsive.css" rel="stylesheet" media="only screen and (max-width: 1200px)" />
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+<!-- CSS file -->
+<link rel="stylesheet" href="<?= base_url()?>assets/css/easy-autocomplete.min.css"> 
+
+<!-- Additional CSS Themes file - not required-->
+<link rel="stylesheet" href="<?= base_url()?>assets/css/easy-autocomplete.themes.min.css"> 
 
 
 <!-- custom javascript -->
 <script src="<?php echo base_url(); ?>/assets/js/script.js" type="text/javascript"></script>
 
+<style>
+	
+	.easy-autocomplete{
+
+		width:90% !important;
+
+	}
+
+	.
+	}
+</style>
 <script type="text/javascript">
 /// some script
 
@@ -58,51 +74,49 @@ $(document).ready(function() {
   </div>
 </div> <!-- container //  -->
 </nav>
+
+<header class="section-header">
+<nav class="navbar navbar-top navbar-expand-lg navbar-dark bg-secondary">
+<div class="container">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+
+
+  
+  </div>
+</div> <!-- container //  -->
+</nav>
 <section class="header-main shadow">
 	<div class="container">
 <div class="row align-items-center">
-	<div class="col-lg-3 col-sm-4">
-	<div class="brand-wrap">
-		<img class="logo" src="<?php echo base_url(); ?>/assets/images/logo-dark.png">
-		
-	</div> <!-- brand-wrap.// -->
+	<div class="col-md-2">
+<h1><font color="black">tri</font><font color="red">buy</font><font color="orange">go</font></h1>
+
 	</div>
-	<div class="col-sm-9">
-			<form action="#" class="search-wrap">
+
+
+	<div class="col-md-10">
+			<form action="<?=base_url()?>search" class="search-wrap" method = "POST">
+				
 				<div class="input-group w-100">
 
-				    <input type="text" class="form-control" style="width:90%;" placeholder="Search">
-
-
-				    
-
-				
-				    
-				      <button class="btn btn-primary" type="submit" style = "width:10%; color: #000000;">
-				        <i class="fa fa-search" style ></i>
+				    <input name = "search" type="text" class="form-control"  placeholder="Search" id = "categories-basic" style = "width:100%;">
+				      
+				      <button class="btn btn-primary" type="submit" style="width:10%;" >
+				        <i class="fa fa-search" style=""></i>
 				      </button>
 
 
 			    </div>
 			</form> <!-- search-wrap .end// -->
 	</div> <!-- col.// -->
-	<div class="col-lg-3 col-sm-12">
-			<a href="#" class="widget-header float-md-right">
-				<div class="icontext">
-					
-					<div class="text-wrap">
-						
-					</div>
-				</div>
-			</a>
-	</div> <!-- col.// -->
+	
+
+	
+
 </div> <!-- row.// -->
 	</div> <!-- container.// -->
 </section> <!-- header-main .// -->
-</header> <!-- section-header.// -->
-
-<!-- ========================= SECTION PAGETOP ========================= -->
-
-<!-- ========================= SECTION INTRO END// ========================= -->
-
-<!-- ========================= SECTION CONTENT ========================= -->
+</header>

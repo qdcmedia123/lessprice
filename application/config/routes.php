@@ -49,7 +49,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'FetchProductDetails';
+
+$route['default_controller'] = 'CanBeLessPrice/defaut_page';
+$route['search'] = 'CanBeLessPrice/index';
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['api/fetch_all_product'] = 'FetchProductDetails/index';

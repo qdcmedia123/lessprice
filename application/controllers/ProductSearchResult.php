@@ -18,8 +18,25 @@ class ProductSearchResult extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	public function __construct() {
+        
+        parent:: __construct();
+
+        $this->load->helper('url');
+        $this->load->library('session');
+    
+
+    }
+
+
 	public function index() {
+
+
+		/*
 		$searchString = 'microsoft Surface Pro 4 Tablet - Intel Core i7, 12.3 Inch, 256GB, 8GB, WiFi, Windows 10 Pro, Silver with Surface Pen';
+
+		//$searchString = $this->input->post('search') ?? '';
 
 		$m = new Memcached();
 		$m->addServer('localhost', 11211);
@@ -29,7 +46,21 @@ class ProductSearchResult extends CI_Controller {
 
 		$output = json_encode($this->IfProductFound($productTitles, $searchString, $productSearchResult, $searchKeys));
 
-		return $this->output->set_output($output);
+		*/
+
+		$_SESSION['item'] = rand(10,100);
+
+		/*
+		$this->load->view('can-be-less-price/templates/header.php');
+		$this->load->view('can-be-less-price/contents/index', ['output' => $output]);
+		$this->load->view('can-be-less-price/templates/footer');
+*/
+
+
+		//return $this->output->set_output($output);
+		return redirect('search/');
+
+
 			
 	}
 
@@ -99,6 +130,9 @@ class ProductSearchResult extends CI_Controller {
 	return $finding ? $finding : ['status' => 404, 'message' => 'Opps, We are unable to find anything right at the moment.', 'searchString' => $searchString];
 
 }
+
+
+
 }
 
 

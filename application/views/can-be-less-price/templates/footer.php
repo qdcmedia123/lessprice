@@ -70,6 +70,56 @@
 </footer>
 <!-- ========================= FOOTER END // ========================= -->
 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   <!-- JS file -->
+  <script src="<?= base_url()?>assets/js/jquery.easy-autocomplete.min.js"></script> 
+
+  <script>
+
+ 
+
+    // http://localhost/canbelessprice/api/category_list_location
+    // http://localhost/canbelessprice/api/product_sugesstion
+
+    $.ajax({
+      type: 'POST',
+      url: "http://localhost/canbelessprice/api/category_list_location",
+      data: {token: 'abcd'},
+      dataType: "json",
+      success: function(resultData) 
+      { 
+          
+
+           var options = {
+           url: "http://localhost/canbelessprice/api/product_sugesstion",
+           categories: resultData
+         ,
+    
+        list: {
+    match: {
+      enabled: true
+    }
+  }
+
+
+};
+
+$("#categories-basic").easyAutocomplete(options);
+      }
+});
+
+   
+
+
+
+
+
+
+  
+ 
+</script>
+
+
 
 </body>
 </html>
