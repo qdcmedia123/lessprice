@@ -1,6 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
+
+
 class CategoryListLocation extends CI_Controller {
 
     /**
@@ -33,16 +36,35 @@ class CategoryListLocation extends CI_Controller {
         ],
         
      */
+        public function __construct() {
+        
+        parent:: __construct();
+
+        $this->load->helper('url');
+        
+    
+
+    }
+    
+
+
+
+
+
     public function index()
     {
+      
         // Set content header type 
         header('Content-Type: application/json'); 
+
+          // Get the config keys 
+        $this->load->helper('server');
 
         // Using Memcached 
         $m = new Memcached();
 
         // Add server 
-        $m->addServer('localhost', 11211);
+        $m->addServer(HOST_NAME, MEMCACHED_PORT);
 
         // Product title 
         $productTitles = $m->get('product_title');

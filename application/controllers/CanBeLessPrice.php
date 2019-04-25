@@ -32,8 +32,6 @@ public function __construct() {
 	public function index()
 	{
 
-		
-		//$searchString = 'microsoft Surface Pro 4 Tablet - Intel Core i7, 12.3 Inch, 256GB, 8GB, WiFi, Windows 10 Pro, Silver with Surface Pen';
 
 		$searchString = $this->input->post('search') ?? '';
 

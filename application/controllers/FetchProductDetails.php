@@ -27,7 +27,7 @@ class FetchProductDetails extends CI_Controller {
 
 		$internalErrors = libxml_use_internal_errors(true);
 
-		$search_key = urlencode('Xiaomi Redmi Note 7');
+		$search_key = urlencode('Samsung Galaxy S10E');
 
 
 		$data = [
@@ -291,9 +291,16 @@ class FetchProductDetails extends CI_Controller {
 
 		$productTitle = $siva['uae.souq.com']['title'] ?? '';
 
+		// Load the configuration file 
 
-		$m = new Memcached();
-		$m->addServer('localhost', 11211);
+		// Get the config keys 
+        $this->load->helper('server');
+
+		// Using Memcached 
+        $m = new Memcached();
+
+        // Add server 
+        $m->addServer(HOST_NAME, MEMCACHED_PORT);
 
 
 		// Get the product search title 

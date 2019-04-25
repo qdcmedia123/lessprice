@@ -24,10 +24,17 @@ class ProductSugesstion extends CI_Controller {
 		// Set the header 
 		header('Content-Type: application/json'); 
 		
-		// Memcached 
-		$m = new Memcached();
+		// Load the configuration file 
 
-		$m->addServer('localhost', 11211);
+		// Get the config keys 
+        $this->load->helper('server');
+
+		// Using Memcached 
+        $m = new Memcached();
+
+        // Add server 
+        $m->addServer(HOST_NAME, MEMCACHED_PORT);
+
 
 		$productTitles = $m->get('product_title');
 

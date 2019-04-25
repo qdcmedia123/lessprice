@@ -19,7 +19,9 @@
 <link href="<?php echo base_url(); ?>/assets/css/bootstrap.css" rel="stylesheet" type="text/css"/>
 
 <!-- Font awesome 5 -->
-<link href="<?php echo base_url(); ?>/assets/fonts/fontawesome/css/fontawesome-all.min.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
 <!-- custom style -->
 <link href="<?php echo base_url(); ?>/assets/css/ui.css" rel="stylesheet" type="text/css"/>

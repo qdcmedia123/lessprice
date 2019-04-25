@@ -103,6 +103,7 @@ body{
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
    <!-- JS file -->
   <script src="<?= base_url()?>assets/js/jquery.easy-autocomplete.min.js"></script> 
+   <script src="<?= base_url()?>assets/js/keys.js"></script> 
 
 <script>
 
@@ -113,7 +114,7 @@ body{
 
     $.ajax({
       type: 'POST',
-      url: "http://localhost/canbelessprice/api/category_list_location",
+      url: ORIGIN+"/canbelessprice/api/category_list_location",
       data: {token: 'abcd'},
       dataType: "json",
       success: function(resultData) 
@@ -121,7 +122,7 @@ body{
           
 
            var options = {
-           url: "http://localhost/canbelessprice/api/product_sugesstion",
+           url: ORIGIN+"/canbelessprice/api/product_sugesstion",
            categories: resultData
          ,
     

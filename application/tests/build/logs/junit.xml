@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="CodeIgniter Application Test Suite" tests="4" assertions="4" errors="0" failures="1" skipped="0" time="0.050777">
+    <testsuite name="Registration_test" file="/var/www/html/canbelessprice/application/tests/controllers/Registration_test.php" tests="1" assertions="1" errors="0" failures="1" skipped="0" time="0.012647">
+      <testcase name="test_index" class="Registration_test" classname="Registration_test" file="/var/www/html/canbelessprice/application/tests/controllers/Registration_test.php" line="13" assertions="1" time="0.012647">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Registration_test::test_index
+Failed asserting that 5 matches expected 1.
+
+/var/www/html/canbelessprice/application/tests/controllers/Registration_test.php:18
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="Welcome_test" file="/var/www/html/canbelessprice/application/tests/controllers/Welcome_test.php" tests="3" assertions="3" errors="0" failures="0" skipped="0" time="0.038130">
+      <testcase name="test_index" class="Welcome_test" classname="Welcome_test" file="/var/www/html/canbelessprice/application/tests/controllers/Welcome_test.php" line="13" assertions="1" time="0.016190"/>
+      <testcase name="test_method_404" class="Welcome_test" classname="Welcome_test" file="/var/www/html/canbelessprice/application/tests/controllers/Welcome_test.php" line="19" assertions="1" time="0.015211"/>
+      <testcase name="test_APPPATH" class="Welcome_test" classname="Welcome_test" file="/var/www/html/canbelessprice/application/tests/controllers/Welcome_test.php" line="25" assertions="1" time="0.006729"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

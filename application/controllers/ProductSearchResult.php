@@ -24,7 +24,7 @@ class ProductSearchResult extends CI_Controller {
         parent:: __construct();
 
         $this->load->helper('url');
-        $this->load->library('session');
+        
     
 
     }
@@ -33,32 +33,6 @@ class ProductSearchResult extends CI_Controller {
 	public function index() {
 
 
-		/*
-		$searchString = 'microsoft Surface Pro 4 Tablet - Intel Core i7, 12.3 Inch, 256GB, 8GB, WiFi, Windows 10 Pro, Silver with Surface Pen';
-
-		//$searchString = $this->input->post('search') ?? '';
-
-		$m = new Memcached();
-		$m->addServer('localhost', 11211);
-		$productTitles = $m->get('product_title');
-		$searchKeys = $m->get('search_key_words');
-		$productSearchResult = $m->get('product_search_result');
-
-		$output = json_encode($this->IfProductFound($productTitles, $searchString, $productSearchResult, $searchKeys));
-
-		*/
-
-		$_SESSION['item'] = rand(10,100);
-
-		/*
-		$this->load->view('can-be-less-price/templates/header.php');
-		$this->load->view('can-be-less-price/contents/index', ['output' => $output]);
-		$this->load->view('can-be-less-price/templates/footer');
-*/
-
-
-		//return $this->output->set_output($output);
-		return redirect('search/');
 
 
 			
